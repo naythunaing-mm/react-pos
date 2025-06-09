@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
 const PageTitle = () => {
     const title = "React POS";
     return (
         <>
-            <h2>{title}</h2>
+            <Link to="/">
+                <h2>{title}</h2>
+            </Link>
         </>
     )
 }
