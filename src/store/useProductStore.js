@@ -13,6 +13,7 @@ const useProductStore = create(() => ({
                 rate: 3.9,
                 count: 120,
             },
+            stock: 55,
         },
         {
             id: 2,
@@ -26,6 +27,7 @@ const useProductStore = create(() => ({
                 rate: 4.1,
                 count: 259,
             },
+            stock: 42,
         },
         {
             id: 3,
@@ -39,6 +41,7 @@ const useProductStore = create(() => ({
                 rate: 4.7,
                 count: 500,
             },
+            stock: 100,
         },
         {
             id: 4,
@@ -52,6 +55,7 @@ const useProductStore = create(() => ({
                 rate: 2.1,
                 count: 430,
             },
+            stock: 76,
         },
         {
             id: 5,
@@ -65,6 +69,7 @@ const useProductStore = create(() => ({
                 rate: 4.6,
                 count: 400,
             },
+            stock: 200,
         },
         {
             id: 6,
@@ -78,6 +83,7 @@ const useProductStore = create(() => ({
                 rate: 3.9,
                 count: 70,
             },
+            stock: 300,
         },
         {
             id: 7,
@@ -91,6 +97,7 @@ const useProductStore = create(() => ({
                 rate: 3,
                 count: 400,
             },
+            stock: 453,
         },
         {
             id: 8,
@@ -104,6 +111,7 @@ const useProductStore = create(() => ({
                 rate: 1.9,
                 count: 100,
             },
+            stock: 432,
         },
         {
             id: 9,
@@ -117,6 +125,7 @@ const useProductStore = create(() => ({
                 rate: 3.3,
                 count: 203,
             },
+            stock: 232,
         },
         {
             id: 10,
@@ -130,6 +139,7 @@ const useProductStore = create(() => ({
                 rate: 2.9,
                 count: 470,
             },
+            stock: 343,
         },
         {
             id: 11,
@@ -143,6 +153,7 @@ const useProductStore = create(() => ({
                 rate: 4.8,
                 count: 319,
             },
+            stock: 532,
         },
         {
             id: 12,
@@ -156,6 +167,7 @@ const useProductStore = create(() => ({
                 rate: 4.8,
                 count: 400,
             },
+            stock: 124,
         },
         {
             id: 13,
@@ -169,6 +181,7 @@ const useProductStore = create(() => ({
                 rate: 2.9,
                 count: 250,
             },
+            stock: 223,
         },
         {
             id: 14,
@@ -182,6 +195,7 @@ const useProductStore = create(() => ({
                 rate: 2.2,
                 count: 140,
             },
+            stock: 23,
         },
         {
             id: 15,
@@ -195,6 +209,7 @@ const useProductStore = create(() => ({
                 rate: 2.6,
                 count: 235,
             },
+            stock: 342,
         },
         {
             id: 16,
@@ -208,6 +223,7 @@ const useProductStore = create(() => ({
                 rate: 2.9,
                 count: 340,
             },
+            stock: 96,
         },
         {
             id: 17,
@@ -221,6 +237,7 @@ const useProductStore = create(() => ({
                 rate: 3.8,
                 count: 679,
             },
+            stock: 64,
         },
         {
             id: 18,
@@ -234,6 +251,7 @@ const useProductStore = create(() => ({
                 rate: 4.7,
                 count: 130,
             },
+            stock: 242,
         },
         {
             id: 19,
@@ -247,6 +265,7 @@ const useProductStore = create(() => ({
                 rate: 4.5,
                 count: 146,
             },
+            stock: 23,
         },
         {
             id: 20,
@@ -260,6 +279,7 @@ const useProductStore = create(() => ({
                 rate: 3.6,
                 count: 145,
             },
+            stock: 43,
         },
     ],
 }));

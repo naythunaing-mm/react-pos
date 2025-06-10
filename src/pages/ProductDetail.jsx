@@ -1,9 +1,18 @@
+import ProductDetailCart from "../components/ProductDetailCart";
+import Input from "../components/Input";
+
 const ProductDetail = () => {
+
     return (
-        <div className="product-detail">
-            <h1>Product Detail Page</h1>
-            <p>This is where the product details will be displayed.</p>
-        </div>
+        <>
+            {/* <div className="flex h-auto flex-col">
+                <ProductDetailCart />
+                <div className="mt-auto">
+                    <Input />
+                </div>
+            </div> */}
+            <ProductDetailCart />
+        </>
     );
 };
 
