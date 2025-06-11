@@ -1,19 +1,40 @@
-import { Link } from "react-router-dom";
-const CartBtn = () => {
-    const name = "My Cart";
-    var count = 2;
+import useCartSectionStore from "../store/useCartSectionStore";
+import { toast } from "react-hot-toast";
+const CartBtn = ({ product }) => {
+    const { carts, addCart } = useCartSectionStore();
+
+    const handleAddCart = (event) => {
+        event.stopPropagation();
+        const newCart = {
+            id: Date.now(),
+            productId: product.id,
+            quantity: 1,
+        }
+        addCart(newCart);
+    };
+
+    const handleAdded = (event) => {
+        event.stopPropagation();
+        toast("Item is already added.");
+    }
+
+    const isAdded = carts.find((cart) => cart.productId === product.id);
     return (
         <>
-            <Link to="/my-cart" className="nav-btn">
-                <button className="relative border border-black rounded-md p-2 hover:bg-black hover:text-white">
-                    {name}
-                    <span className="absolute -top-2 -right-2 rounded-full bg-red-500 text-white text-xs px-2 py-0.5 flex items-center justify-center">
-                        {count}
-                    </span>
+            {isAdded ? (
+                <button onClick={handleAdded} className="bg-black text-white border border-black rounded-md p-2 hover:bg-black hover:text-white text-nowrap mx-2">
+                    Added
                 </button>
-            </Link>
-
+            ) : (
+                <button
+                    onClick={handleAddCart}
+                    className="border border-black rounded-md p-2 hover:bg-black hover:text-white"
+                >
+                    Add Cart
+                </button>
+            )}
         </>
-    )
-}
+    );
+};
+
 export default CartBtn;

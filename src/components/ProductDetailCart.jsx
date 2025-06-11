@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import BreadCrump from "../components/BreadCrump";
 import useProductStore from "../store/useProductStore";
-import Btn from "../components/Btn";
+import CartBtn from "./CartBtn";
 import Rating from "../components/Rating";
 
 const ProductDetailCart = () => {
@@ -40,7 +40,7 @@ const ProductDetailCart = () => {
                         <span className="text-lg font-medium text-gray-800">
                             ${currentProduct.price}
                         </span>
-                        <Btn key={currentProduct.id} />
+                        <CartBtn key={currentProduct.id} product={currentProduct} />
                     </div>
                 </div>
             </div>

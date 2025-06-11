@@ -1,5 +1,5 @@
 import useCategoryStore from '../store/useCategoryStore';
-import Btn from './Btn';
+import CategoryBtn from './CategoryBtn';
 const CategorySection = () => {
     const { categories } = useCategoryStore();
     if (!categories || categories.length === 0) {
@@ -11,7 +11,7 @@ const CategorySection = () => {
             <h2 className="text-2xl my-3">Categories</h2>
             <div className="flex overflow-scroll scroll-hidden">
                 {categories.map((category) => (
-                    <Btn key={category.id} id={category.id} category={category.category} current={category.isActive} />
+                    <CategoryBtn key={category.id} id={category.id} category={category.category} current={category.isActive} />
                 ))}
             </div>
         </div>

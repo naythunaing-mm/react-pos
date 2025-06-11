@@ -1,12 +1,17 @@
-import Btn from './Btn';
+import CartBtn from './CartBtn';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
+import { useNavigate } from 'react-router-dom';
 const Cart = ({ product: { id, title, price, image, rating: { rate } } }) => {
     const rating = parseInt(rate).toFixed(0);
+    const navigate = useNavigate();
+    const handleOpenDetail = () => {
+        navigate(`/product-detail/${id}`);
+    }
 
     return (
         <>
-            <Link to={`/product-details/${id}`} className="cart flex flex-col border border-gray-300 rounded-md p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div onClick={handleOpenDetail} className="cart flex flex-col border border-gray-300 rounded-md p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="flex justify-center mb-4">
                     <img src={image} alt={title} className="cart-img w-40 h-44" />
                 </div>
@@ -17,9 +22,9 @@ const Cart = ({ product: { id, title, price, image, rating: { rate } } }) => {
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                     <p className="text-gray-700 font-medium">${price}</p>
-                    <Btn key={id} />
+                    <CartBtn key={id} product={{ id, title, price, image, rating: { rate } }} current={false} />
                 </div>
-            </Link>
+            </div>
 
         </>
     )

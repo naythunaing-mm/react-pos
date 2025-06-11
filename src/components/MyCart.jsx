@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import useCartSectionStore from '../store/useCartSectionStore';
 import useProductStore from '../store/useProductStore';
+import toast from 'react-hot-toast';
 
 const MyCart = ({ cart: { quantity, productId } }) => {
     const [count, setCount] = useState(quantity);
     const { products } = useProductStore();
     const product = products.find((el) => el.id === productId);
-    const { increaseCart, decreaseCart } = useCartSectionStore();
+    const { increaseCart, decreaseCart, remove } = useCartSectionStore();
     const cost = count * product.price;
 
     if (!product) return <div className='text-center bg-red-400 text-white text-nowrap'>Product not found.</div>;
@@ -17,11 +18,16 @@ const MyCart = ({ cart: { quantity, productId } }) => {
     };
 
     const decrease = () => {
-        if (count > 0) {
-            setCount(count - 1);
-            decreaseCart(productId, 1);
+        if (quantity <= 1) {
+            toast("Item quantity cannot be less than 1.");
+            return;
         }
+        setCount(count - 1);
+        decreaseCart(productId, 1);
     }
+    const hangleRemove = () => {
+        remove(productId);
+    };
 
     return (
         <div className="border border-black p-5 grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 items-center">
@@ -43,8 +49,9 @@ const MyCart = ({ cart: { quantity, productId } }) => {
                 </div>
             </div>
 
-            <div className="col-span-1 flex items-center justify-end">
+            <div className="col-span-1 gap-2 flex items-center justify-end">
                 <p className="text-xl font-bold">${cost.toFixed(2)}</p>
+                <button onClick={hangleRemove} className="border border-black rounded-md p-2 hover:bg-black hover:text-white text-xs">remove</button>
             </div>
         </div>
     );
