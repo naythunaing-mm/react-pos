@@ -7,3 +7,6 @@
 
 10/06/2025  1.Create Product detail and responsive
             2.Add BreadCrump
+
+11/06/2025  1.Fixed MyCardSection's design
+            2.Fixed increaseCart and decreaseCart

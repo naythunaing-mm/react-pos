@@ -17,12 +17,21 @@ const useCartSectionStore = create((set) => ({
             quantity: 2,
         },
     ],
-    addCart: (newProduct) =>
+    increaseCart: (productId, amount) =>
         set((state) => ({
             carts: state.carts.map((cart) =>
-                cart.productId === newProduct.id
-                    ? { ...cart, quantity: cart.quantity + 1 }
-                    : state.carts.push(newProduct)
+                cart.productId === productId
+                    ? { ...cart, quantity: cart.quantity + amount }
+                    : { ...cart, quantity: cart.quantity }
+            ),
+        })),
+
+    decreaseCart: (productId, amount) =>
+        set((state) => ({
+            carts: state.carts.map((cart) =>
+                cart.productId === productId
+                    ? { ...cart, quantity: cart.quantity - amount }
+                    : { ...cart, quantity: cart.quantity }
             ),
         })),
 }));

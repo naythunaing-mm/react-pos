@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
+import useCartSectionStore from '../store/useCartSectionStore';
 import useProductStore from '../store/useProductStore';
 
-const MyCart = ({ cart: { productId, quantity }, addCart }) => {
+const MyCart = ({ cart: { quantity, productId } }) => {
     const [count, setCount] = useState(quantity);
     const { products } = useProductStore();
     const product = products.find((el) => el.id === productId);
-    if (!product) return <div>Product not found.</div>;
-
+    const { increaseCart, decreaseCart } = useCartSectionStore();
     const cost = count * product.price;
-    console.log("Product:", product);
+
+    if (!product) return <div className='text-center bg-red-400 text-white text-nowrap'>Product not found.</div>;
+
     const increase = () => {
-        const newCount = count + 1;
-        setCount(newCount);
-        addCart(product);
+        setCount(count + 1);
+        increaseCart(productId, 1);
     };
+
+    const decrease = () => {
+        if (count > 0) {
+            setCount(count - 1);
+            decreaseCart(productId, 1);
+        }
+    }
 
     return (
         <div className="border border-black p-5 grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 items-center">
@@ -30,8 +38,8 @@ const MyCart = ({ cart: { productId, quantity }, addCart }) => {
                 <p className="text-center">Quantity</p>
                 <div className="flex flex-row gap-3 items-center justify-center mt-1">
                     <button onClick={increase} className="bg-black text-white px-3 py-1">+</button>
-                    <p>{count}</p>
-                    <button className="bg-black text-white px-3 py-1">-</button>
+                    <p>{quantity}</p>
+                    <button onClick={decrease} className="bg-black text-white px-3 py-1">-</button>
                 </div>
             </div>
 
