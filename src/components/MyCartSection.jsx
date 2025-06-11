@@ -1,6 +1,8 @@
 import MyCart from "./MyCart";
 import useCartSectionStore from "../store/useCartSectionStore";
 import useProductStore from "../store/useProductStore";
+import emptyCart from '../assets/emptyCart.svg';
+
 
 const MyCartSection = () => {
     const { carts } = useCartSectionStore();
@@ -11,13 +13,13 @@ const MyCartSection = () => {
             const product = products.find((el) => el.id === cart.productId);
             return total + (product ? cart.quantity * product.price : 0);
         }, 0)
-        .toFixed(2);
+        .toFixed(1);
 
-    const tax = +(total * 0.005).toFixed(2);
-    const netTotal = +(total + tax).toFixed(2);
+    const tax = +(total * 0.005).toFixed(1);
+    const netTotal = +(total + tax).toFixed(1);
     return (
         <>
-            <div className="min-h-screen relative pb-40">
+            <div className="min-h-screen relative">
                 <div>
                     {carts.map((cart) =>
                         <MyCart key={cart.id} cart={cart} />
@@ -53,7 +55,8 @@ const MyCartSection = () => {
 
                 {carts.length === 0 && (
                     <div className="text-center text-2xl font-bold mt-5">
-                        Your cart is empty.
+                        <img src={emptyCart} alt="Empty cart" className="mx-auto w-48" />
+                        <p className="text-gray-600 my-7">Your cart is empty.</p>
                     </div>
                 )}
             </div>
