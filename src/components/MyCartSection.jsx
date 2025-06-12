@@ -57,9 +57,9 @@ const MyCartSection = () => {
                 )}
 
                 {carts.length === 0 && (
-                    <div className="text-center text-2xl font-bold mt-5">
+                    <div className="text-center text-xl font-bold mt-5">
                         <img src={emptyCart} alt="Empty cart" className="mx-auto w-48" />
-                        <p className="text-gray-600 my-7">Your cart is empty.</p>
+                        <p className="text-gray-600 my-7 border border-black p-3 animate-bounce">Your cart is empty.</p>
                     </div>
                 )}
             </div>
