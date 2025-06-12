@@ -6,13 +6,22 @@ import { Toaster } from "react-hot-toast";
 const MainLayout = () => {
     return (
         <>
-
+            {/* <Header />
             <Container >
-                <Header />
                 <Outlet />
-                <Footer />
             </Container>
             <Toaster />
+            <Footer /> */}
+            <div className="min-h-screen flex flex-col">
+                <Header />
+
+                <main className="flex-grow">
+                    <Container><Outlet /></Container>
+                    <Toaster />
+                </main>
+
+                <Footer />
+            </div>
         </ >
     )
 }

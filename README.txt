@@ -11,3 +11,6 @@
 11/06/2025  1.Fixed MyCardSection's design
             2.Fixed increaseCart and decreaseCart
             3.Fixed Order Calculation
+
+12/06/2025  1.Create Login Page
+            2.Add image hover animation

@@ -25,7 +25,7 @@ const MyCart = ({ cart: { quantity, productId } }) => {
         setCount(count - 1);
         decreaseCart(productId, 1);
     }
-    const hangleRemove = () => {
+    const handleRemove = () => {
         remove(productId);
     };
 
@@ -36,7 +36,7 @@ const MyCart = ({ cart: { quantity, productId } }) => {
             </div>
 
             <div className="col-span-1 md:col-span-3">
-                <p className="font-bold">{product.title}</p>
+                <p className="font-bold text-justify text-xs md:text-xl lg:text-xl">{product.title}</p>
                 <p className="text-gray-500">Price: ${product.price}</p>
             </div>
 
@@ -49,9 +49,9 @@ const MyCart = ({ cart: { quantity, productId } }) => {
                 </div>
             </div>
 
-            <div className="col-span-1 gap-2 flex items-center justify-end">
-                <p className="text-xl font-bold">${cost.toFixed(2)}</p>
-                <button onClick={hangleRemove} className="border border-black rounded-md p-2 hover:bg-black hover:text-white text-xs">remove</button>
+            <div className="col-span-1 gap-2 text-xs md:text-xl lg:text-xl flex items-center justify-end">
+                <p className="font-bold">${cost.toFixed(2)}</p>
+                <button onClick={handleRemove} className="border border-black rounded-md p-2 hover:bg-black hover:text-white text-xs">remove</button>
             </div>
         </div>
     );

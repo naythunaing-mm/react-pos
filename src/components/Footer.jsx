@@ -8,14 +8,19 @@ const Footer = () => {
                     <Link to="/">
                         <FooterButton icon={<FaHome />} label="Products" />
                     </Link>
-                    <FooterButton icon={<FaBoxOpen />} label="Grocery" />
+                    <Link to="/grocery">
+                        <FooterButton icon={<FaBoxOpen />} label="Grocery" />
+                    </Link>
                     <FooterButton icon={<FaSearch />} label="Search" />
-                    <FooterButton icon={<FaUser />} label="Account" />
+                    <Link to="/auth-user">
+                        <FooterButton icon={<FaUser />} label="Account" />
+                    </Link>
                 </div>
             </nav>
-            <footer>
+            <footer className="mb-16">
                 <p className="bg-gray-200 text-center text-sm py-2">Copyright &copy; {new Date().getFullYear()}. Coding by  <span className="font-bold">Nay Thu Naing</span></p>
             </footer>
+
         </>
     );
 };
