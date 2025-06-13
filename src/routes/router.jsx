@@ -12,7 +12,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         errorElement: <ErrorPage />,
-        basename: "/react-pos",
         children: [
             {
                 path: "/",
@@ -37,5 +36,7 @@ const router = createBrowserRouter([
 
         ]
     }
-]);
+], {
+    basename: "/react-pos"
+});
 export default router
