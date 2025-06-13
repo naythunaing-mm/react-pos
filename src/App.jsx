@@ -3,15 +3,18 @@ import CategorySection from "./components/CategorySection"
 import Header from "./components/Header"
 import ProductSection from "./components/ProductSection"
 import Footer from "./components/Footer"
+import { BrowserRouter } from "react-router-dom"
 function App() {
 
   return (
     <>
-      <Header />
-      <Container>
+      <BrowserRouter basename="/react-pos">
+        <Header />
+        <Container>
 
-      </Container>
-      <Footer />
+        </Container>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
