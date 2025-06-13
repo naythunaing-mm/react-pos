@@ -3,7 +3,7 @@ const Grocery = () => {
     return <>
         <div className="">
             <img src={server_down} alt="" />
-            <p className="font-bold border border-black text-black p-8 rounded-lg text-center my-10 text-xl animate-bounce">OOPS!</p>
+            <p className="font-bold border border-black text-black p-5 rounded-lg text-center my-10 text-xl animate-bounce">OOPS!</p>
         </div>
     </>
 }

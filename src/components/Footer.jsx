@@ -1,4 +1,4 @@
-import { FaHome, FaBoxOpen, FaSearch, FaUser } from "react-icons/fa";
+import { FaHome, FaBoxOpen, FaEnvelope, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                     <Link to="/grocery">
                         <FooterButton icon={<FaBoxOpen />} label="Grocery" />
                     </Link>
-                    <FooterButton icon={<FaSearch />} label="Search" />
+                    <FooterButton icon={<FaEnvelope />} label="Message" />
                     <Link to="/auth-user">
                         <FooterButton icon={<FaUser />} label="Account" />
                     </Link>
