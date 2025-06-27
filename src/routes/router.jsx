@@ -10,7 +10,7 @@ import AuthPage from "../pages/AuthPage";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/react-pos/",
         element: <MainLayout />,
         errorElement: <ErrorPage />,
         children: [
@@ -40,5 +40,7 @@ const router = createBrowserRouter([
 
         ]
     }
-]);
+], {
+    basename: "/react-pos",
+});
 export default router
