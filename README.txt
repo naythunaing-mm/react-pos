@@ -14,3 +14,6 @@
 
 12/06/2025  1.Create Login Page
             2.Add image hover animation
+
+27/06/2025  1.Modify responsive design
+            2.Add ProductDetail Review Feature

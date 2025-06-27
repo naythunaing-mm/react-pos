@@ -15,20 +15,20 @@ const CartBtn = ({ product }) => {
 
     const handleAdded = (event) => {
         event.stopPropagation();
-        toast("Item is already added.");
+        toast.error("Item is already added.");
     }
 
     const isAdded = carts.find((cart) => cart.productId === product.id);
     return (
         <>
             {isAdded ? (
-                <button onClick={handleAdded} className="bg-black text-white border border-black rounded-md p-2 hover:bg-black hover:text-white text-nowrap mx-2">
+                <button onClick={handleAdded} className="bg-black text-white border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-nowrap mx-2 text-xs md:text-lg lg:text-lg">
                     Added
                 </button>
             ) : (
                 <button
                     onClick={handleAddCart}
-                    className="border border-black rounded-md p-2 hover:bg-black hover:text-white"
+                    className="border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-xs md:text-lg lg:text-lg mx-2"
                 >
                     Add Cart
                 </button>

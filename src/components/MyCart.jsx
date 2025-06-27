@@ -19,7 +19,7 @@ const MyCart = ({ cart: { quantity, productId } }) => {
 
     const decrease = () => {
         if (quantity <= 1) {
-            toast("Item quantity cannot be less than 1.");
+            toast.error("Item quantity cannot be less than 1.");
             return;
         }
         setCount(count - 1);

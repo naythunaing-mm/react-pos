@@ -4,8 +4,8 @@ import PageTitle from "./PageTitle";
 const Header = () => {
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-50">
-                <div className="flex w-full justify-between shadow-sm bg-white items-center p-2 ">
+            <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+                <div className="flex justify-between  p-2  items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <PageTitle />
                     <NavCartBtn />
                 </div>

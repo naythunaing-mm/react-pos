@@ -1,11 +1,11 @@
 import BreadCrump from "../components/BreadCrump";
 import LoginForm from "../components/LoginForm";
 
-const User = () => {
+const AuthPage = () => {
     return (
         <>
             <LoginForm />
         </>
     )
 }
-export default User;
+export default AuthPage;

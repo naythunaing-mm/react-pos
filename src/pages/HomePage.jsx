@@ -1,6 +1,6 @@
 import CategorySection from "../components/CategorySection";
 import ProductSection from "../components/ProductSection";
-const Home = () => {
+const HomePage = () => {
     return (
         <>
             <CategorySection />
@@ -8,4 +8,4 @@ const Home = () => {
         </>
     )
 }
-export default Home;
+export default HomePage;

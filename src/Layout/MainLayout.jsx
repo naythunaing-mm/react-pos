@@ -3,23 +3,18 @@ import Header from "../components/Header";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import { Toaster } from "react-hot-toast";
+import NavBtn from "../components/NavBtn";
 const MainLayout = () => {
     return (
         <>
-            {/* <Header />
-            <Container >
-                <Outlet />
-            </Container>
-            <Toaster />
-            <Footer /> */}
             <div className="min-h-screen flex flex-col">
                 <Header />
-
                 <main className="flex-grow">
                     <Container><Outlet /></Container>
-                    <Toaster />
+                    <Toaster position="top-right"
+                        reverseOrder={false} />
                 </main>
-
+                <NavBtn />
                 <Footer />
             </div>
         </ >

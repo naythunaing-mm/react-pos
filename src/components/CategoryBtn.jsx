@@ -8,7 +8,7 @@ const CategoryBtn = ({ id, category, current }) => {
         <>
             <button
                 onClick={handleClick} className={`${current ? "bg-black text-white" : "bg-white text-black"
-                    } border border-black rounded-md p-2 hover:bg-black hover:text-white text-nowrap mx-2`}
+                    } border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-nowrap mx-2`}
             >
                 {category}
             </button>

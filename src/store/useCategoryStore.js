@@ -7,11 +7,6 @@ const useCategoryStore = create((set) => ({
             category: "All",
         },
         {
-            id: 1,
-            isActive: false,
-            category: "men's clothing",
-        },
-        {
             id: 2,
             isActive: false,
             category: "jewelery",
@@ -25,6 +20,11 @@ const useCategoryStore = create((set) => ({
             id: 4,
             isActive: false,
             category: "women's clothing",
+        },
+        {
+            id: 1,
+            isActive: false,
+            category: "men's clothing",
         },
     ],
     activeCategory: (categoryId) =>

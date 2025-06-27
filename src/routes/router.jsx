@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/Home"
 import ErrorPage from "../pages/ErrorPage";
 import MainLayout from "../Layout/MainLayout";
-import ProductDetail from "../pages/ProductDetail";
 import MyCartPage from "../pages/MyCartPage";
-import Grocery from "../pages/Grocery";
-import User from "../pages/User";
+import SearchPage from "../pages/SearchPage";
+import HomePage from "../pages/HomePage";
+import ProductDetailPage from "../pages/ProductDetailPage";
+import GroceryPage from "../pages/GroceryPage";
+import AuthPage from "../pages/AuthPage";
 
 const router = createBrowserRouter([
     {
@@ -15,23 +16,26 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: <HomePage />,
             },
             {
                 path: "product-detail/:id",
-                element: <ProductDetail />,
+                element: <ProductDetailPage />,
             },
             {
                 path: "my-cart",
                 element: <MyCartPage />
             },
             {
-                path: "grocery",
-                element: <Grocery />
+                path: "/my-cart",
+                element: <GroceryPage />
             },
             {
                 path: "auth-user",
-                element: <User />
+                element: <AuthPage />
+            }, {
+                path: "product-search",
+                element: <SearchPage />
             }
 
         ]
