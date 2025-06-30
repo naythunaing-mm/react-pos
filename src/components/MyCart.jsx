@@ -30,7 +30,7 @@ const MyCart = ({ cart: { quantity, productId } }) => {
     };
 
     return (
-        <div className="border border-black p-5 grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 items-center">
+        <div className="border border-black p-5 grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 items-center dark:border-gray-600">
             <div className="col-span-1 flex justify-center">
                 <img src={product.image} className="h-16" alt={product.title} />
             </div>
@@ -51,7 +51,7 @@ const MyCart = ({ cart: { quantity, productId } }) => {
 
             <div className="col-span-1 gap-2 text-xs md:text-xl lg:text-xl flex items-center justify-end">
                 <p className="font-bold">${cost.toFixed(2)}</p>
-                <button onClick={handleRemove} className="border border-black rounded-md p-2 hover:bg-black hover:text-white text-xs">remove</button>
+                <button onClick={handleRemove} className="border border-black dark:border-gray-600 rounded-md p-2 hover:bg-black hover:text-white text-xs ">remove</button>
             </div>
         </div>
     );

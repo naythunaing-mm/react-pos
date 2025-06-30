@@ -15,7 +15,7 @@ const Cart = ({ product: { id, title, price, image, rating: { rate } } }) => {
 
     return (
         <>
-            <div onClick={handleOpenDetail} className="cart flex flex-col border border-gray-300 rounded-md p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div onClick={handleOpenDetail} className="cart flex flex-col border border-gray-300 rounded-md p-4 shadow-md hover:shadow-lg transition-shadow duration-300 dark:border-gray-600">
                 <div className="flex justify-center mb-2 hover:animate-pulse">
                     <img src={image} alt={title} className="cart-img w-40 h-32 md:h-36 lg:h-36 hover:rotate-6 transition duration-700 ease-in-out" />
                 </div>
@@ -28,7 +28,7 @@ const Cart = ({ product: { id, title, price, image, rating: { rate } } }) => {
                     <Rating className="w-1 my-2" rate={rating} />
                 </div>
                 <div className="flex justify-between items-center mt-auto">
-                    <p className="text-gray-700 text-xs md:text-lg lg:text-lg">${price}</p>
+                    <p className="text-gray-700 text-xs md:text-lg lg:text-lg dark:text-white">${price}</p>
                     <CartBtn key={id} product={{ id, title, price, image, rating: { rate } }} current={false} />
                 </div>
             </div>

@@ -28,7 +28,7 @@ const ProductDetailCart = () => {
 
     return (<>
         <BreadCrump currentPageTitle="Product Detail" />
-        <div className="mb-2 cart border border-gray-200 rounded-2xl p-4 shadow transition-shadow duration-300 hover:shadow-lg">
+        <div className="mb-2 cart border dark:border-gray-600 border-gray-200 rounded-2xl p-4 shadow transition-shadow duration-300 hover:shadow-lg">
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mb-4">
                 <div className="flex flex-col justify-center items-center hover:animate-pulse">
                     <img
@@ -54,7 +54,7 @@ const ProductDetailCart = () => {
                         <p className="text-xs md:text-xl lg:text-xl text-gray-500 mb-3">Stock: <span className="bg-slate-700 text-white px-2 rounded-sm">{currentProduct.stock}</span></p>
                     </div>
                     <div className="w-full justify-between items-center flex">
-                        <span className="text-lg font-medium text-gray-800">
+                        <span className="text-lg font-medium text-gray-800 dark:text-white">
                             ${currentProduct.price}
                         </span>
                         <CartBtn key={currentProduct.id} product={currentProduct} />
@@ -64,8 +64,8 @@ const ProductDetailCart = () => {
         </div>
         <div className="review-gp">
             <hr className="w-48 h-1 mx-auto my-7 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700" />
-            <p className="text-xl text-black font-semibold mt-5 text-center mb-2">Reviews</p>
-            <div className="h-[300px] overflow-y-scroll overflow-x-hidden p-4 bg-white border border-gray-200 rounded-lg scrollbar-stable">
+            <p className="text-xl text-black font-semibold mt-5 text-center mb-2 dark:text-white">Reviews</p>
+            <div className="h-[300px] dark:bg-gray-900 overflow-y-scroll overflow-x-hidden p-4 bg-white dark:border-gray-600 border border-gray-200 rounded-lg scrollbar-stable">
                 {customerReviews.length === 0 ?
                     <div className="h-[300px] max-w-full rounded-lg"><img src={message} alt="message" /></div>
                     : customerReviews.map((review) => <ReviewSection key={review.id} review={review} />)}

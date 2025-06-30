@@ -22,13 +22,13 @@ const CartBtn = ({ product }) => {
     return (
         <>
             {isAdded ? (
-                <button onClick={handleAdded} className="bg-black text-white border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-nowrap mx-2 text-xs md:text-lg lg:text-lg">
+                <button onClick={handleAdded} className="dark:border-gray-600 bg-black text-white border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-nowrap mx-2 text-xs md:text-lg lg:text-lg">
                     Added
                 </button>
             ) : (
                 <button
                     onClick={handleAddCart}
-                    className="border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-xs md:text-lg lg:text-lg mx-2"
+                    className="dark:border-gray-600 border border-black rounded-md p-1 px-2 hover:bg-black hover:text-white text-xs md:text-lg lg:text-lg mx-2"
                 >
                     Add Cart
                 </button>
