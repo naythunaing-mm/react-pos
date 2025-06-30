@@ -10,12 +10,12 @@ const Footer = () => {
                             <div className="mb-6 md:mb-0">
                                 <a href="https://flowbite.com/" className="flex items-center">
                                     <img src={react} className="h-7 me-2" alt="FlowBite Logo" />
-                                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">React Project</span>
+                                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-gray-400">React Project</span>
                                 </a>
                             </div>
                             <div className="grid grid-cols-3 gap-4 sm:gap-6 sm:grid-cols-3">
                                 <div>
-                                    <p className="mb-2 text-xs font-semibold text-gray-900 uppercase dark:text-white">Resources</p>
+                                    <p className="mb-2 text-xs font-semibold text-gray-900 uppercase dark:text-gray-400">Resources</p>
                                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                         <li className="mb-4">
                                             <a href="https://flowbite.com/" className="hover:underline text-xs md:text-sm lg:text-sm">Flowbite</a>
@@ -26,7 +26,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                                    <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-gray-400">Follow us</h2>
                                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                         <li className="mb-4">
                                             <a href="https://github.com/themesberg/flowbite" className="hover:underline text-xs md:text-sm lg:text-sm">Github</a>
@@ -37,7 +37,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                                    <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-gray-400">Legal</h2>
                                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                         <li className="mb-4">
                                             <a href="#" className="hover:underline text-xs md:text-sm lg:text-sm">Privacy Policy</a>

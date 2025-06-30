@@ -38,7 +38,7 @@ const ProductDetailCart = () => {
                     />
                 </div>
                 <div className="my-1 md:my-3 lg:my-3 flex flex-col justify-between items-start p-4">
-                    <h3 className="text-xs md:text-xl lg:text-xl font-semibold my-2 text-justify leading-snug">
+                    <h3 className="text-xs dark:text-gray-400 md:text-xl lg:text-xl font-semibold my-2 text-justify leading-snug">
                         {currentProduct.title}
                     </h3>
                     <p className="text-sm text-gray-600 text-justify mb-3">
@@ -54,7 +54,7 @@ const ProductDetailCart = () => {
                         <p className="text-xs md:text-xl lg:text-xl text-gray-500 mb-3">Stock: <span className="bg-slate-700 text-white px-2 rounded-sm">{currentProduct.stock}</span></p>
                     </div>
                     <div className="w-full justify-between items-center flex">
-                        <span className="text-lg font-medium text-gray-800 dark:text-white">
+                        <span className="text-lg font-medium text-gray-800 dark:text-gray-400">
                             ${currentProduct.price}
                         </span>
                         <CartBtn key={currentProduct.id} product={currentProduct} />

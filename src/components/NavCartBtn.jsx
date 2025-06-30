@@ -30,7 +30,7 @@ const NavCartBtn = () => {
         <div className="flex justify-center items-center">
             <button
                 onClick={toggleDarkMode}
-                className="text-3xl p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-yellow-500 dark:text-white shadow-md hover:scale-105 transition mx-3"
+                className="text-3xl p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-yellow-500 dark:text-gray-400 shadow-md hover:scale-105 transition mx-3"
             >
                 {darkMode ? <HiSun className="text-2xl" /> : <HiMoon className="text-2xl" />}
             </button>

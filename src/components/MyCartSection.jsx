@@ -30,7 +30,7 @@ const MyCartSection = () => {
                     <div className="">
                         <div className="mb-16"></div>
                         <div className="fixed bottom-16 left-0 w-full bg-white p-4 shadow-lg z-50 dark:bg-gray-900 ">
-                            <hr className="border border-black my-4" />
+                            <hr className="border border-black my-4 dark:border-gray-600" />
                             <div className="md:px-10">
                                 <div className="flex text-xs md:text-xl lg:text-xl flex-wrap gap-2 md:gap-7 justify-center md:justify-end">
                                     <div className="flex gap-1 text-nowrap justify-center">

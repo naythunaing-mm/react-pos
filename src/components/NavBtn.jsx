@@ -9,7 +9,7 @@ const NavBtn = () => {
         </button>
     );
     return (<>
-        <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-md z-50 dark:bg-gray-900">
+        <nav className="fixed bottom-0 left-0 right-0 bg-white border-t dark:border-t-slate-800 border-gray-200 shadow-md z-50 dark:bg-gray-900">
             <div className="grid grid-cols-4 gap-2 px-4 py-2 sm:px-6">
                 <Link to="/" className="flex flex-col items-center">
                     <FooterButton icon={<FaHome />} label="Products" />
