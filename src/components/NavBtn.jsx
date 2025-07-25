@@ -3,7 +3,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { Link } from "react-router-dom";
 const NavBtn = () => {
     const FooterButton = ({ icon, label }) => (
-        <button className="flex flex-col items-center text-gray-600 hover:text-white transition-colors text-sm">
+        <button className="flex flex-col items-center text-gray-600 hover:text-black hover:dark:text-white transition-colors text-sm">
             {icon}
             <span className="mt-1 text-xs md:text-sm lg:text-sm">{label}</span>
         </button>
