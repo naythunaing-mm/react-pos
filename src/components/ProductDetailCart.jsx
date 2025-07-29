@@ -8,7 +8,6 @@ import { useState } from "react";
 import ReviewSection from "./ReviewSection";
 import message from "../assets/Message.svg"
 
-
 const ProductDetailCart = () => {
     const productId = useParams();
     const { products } = useProductStore();
@@ -62,12 +61,12 @@ const ProductDetailCart = () => {
                 </div>
             </div>
         </div>
-        <div className="review-gp">
-            <hr className="w-48 h-1 mx-auto my-7 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700" />
-            <p className="text-xl text-black font-semibold mt-5 text-center mb-2 dark:text-white">Reviews</p>
+        <hr className="w-48 h-1 mx-auto my-7 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700" />
+        <p className="text-xl text-black font-semibold mt-5 text-center mb-2 dark:text-white">Reviews</p>
+        <div className="review-gp md:grid md:grid-cols-2 gap-4">
             <div className="h-[300px] dark:bg-gray-900 overflow-y-scroll overflow-x-hidden p-4 bg-white dark:border-gray-600 border border-gray-200 rounded-lg scrollbar-stable">
                 {customerReviews.length === 0 ?
-                    <div className="h-[300px] max-w-full rounded-lg"><img src={message} alt="message" /></div>
+                    <div className="object-contain max-w-full rounded-lg"><img src={message} alt="message" /></div>
                     : customerReviews.map((review) => <ReviewSection key={review.id} review={review} />)}
             </div>
             <div className="w-full">

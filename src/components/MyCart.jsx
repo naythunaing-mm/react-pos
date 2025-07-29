@@ -43,9 +43,9 @@ const MyCart = ({ cart: { quantity, productId } }) => {
             <div className="col-span-1 flex flex-col items-center">
                 <p className="text-center">Quantity</p>
                 <div className="flex flex-row gap-3 items-center justify-center mt-1">
-                    <button onClick={increase} className="bg-black text-white px-3 py-1">+</button>
+                    <button onClick={increase} className="bg-black text-white px-3 py-1 dark:bg-gray-700">+</button>
                     <p>{quantity}</p>
-                    <button onClick={decrease} className="bg-black text-white px-3 py-1">-</button>
+                    <button onClick={decrease} className="bg-black text-white px-3 py-1 dark:bg-gray-700">-</button>
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ const PageTitle = () => {
     return (
         <>
             <Link to="/">
-                <h2 className="text-2xl text-black font-bold dark:text-gray-400">{title}</h2>
+                <h2 className="text-2xl text-black font-bold dark:text-gray-100">{title}</h2>
             </Link>
         </>
     )

@@ -1,6 +1,5 @@
 import useCustomerReviewStore from "../store/useCustomerReviewStore";
-import { HiTrash } from "react-icons/hi";
-import { HiOutlineUserCircle } from "react-icons/hi";
+import { HiOutlineTrash, HiOutlineUserCircle } from "react-icons/hi2";
 
 const ReviewSection = ({ review }) => {
     const { deleteCustomerReview } = useCustomerReviewStore();
@@ -21,7 +20,7 @@ const ReviewSection = ({ review }) => {
                     </p>
 
                     <div className="flex-shrink-0 w-6 h-6">
-                        <HiTrash
+                        <HiOutlineTrash
                             onClick={handleDelete}
                             className="w-6 h-6 dark:text-gray-400 cursor-pointer"
                         />

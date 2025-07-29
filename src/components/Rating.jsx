@@ -3,8 +3,7 @@ const Rating = ({ rate }) => {
     const rating = parseInt(rate).toFixed(0);
     const stars = Array.from({ length: 5 }, (_, index) => index + 1);
     return (
-        <div className="flex gap-2 mt-auto">
-
+        <div className="flex mt-auto">
             {stars.map((num) => (
                 <svg
                     key={num}

@@ -15,19 +15,36 @@ const Cart = ({ product: { id, title, price, image, rating: { rate } } }) => {
 
     return (
         <>
-            <div onClick={handleOpenDetail} className="cart flex flex-col border border-gray-300 rounded-md p-4 shadow-md hover:shadow-lg transition-shadow duration-300 dark:border-gray-800">
-                <div className="flex justify-center mb-2 hover:animate-pulse">
-                    <img src={image} alt={title} className="cart-img w-40 h-32 md:h-36 lg:h-36 hover:rotate-6 transition duration-700 ease-in-out" />
+            <div
+                onClick={handleOpenDetail}
+                className="group flex flex-col border border-gray-200 dark:border-gray-800 rounded-xl p-4 shadow-sm hover:shadow-lg transition duration-300 bg-white dark:bg-gray-900 cursor-pointer"
+            >
+                <div className="flex justify-center mb-4">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-24 h-20 md:w-36 md:h-28 lg:w-40 lg:h-32 object-contain transform group-hover:rotate-3 group-hover:scale-105 transition duration-500 ease-in-out"
+                    />
                 </div>
-                <h3 className="text-xs md:text-xl lg:text-xl font-semibold text-justify dark:text-gray-400">{truncate(title, 15)}</h3>
-                <div className="my-2">
-                    <Rating className="w-1 my-2" rate={rating} />
+
+                <h3 className="text-sm md:text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 text-center line-clamp-2">
+                    {truncate(title, 15)}
+                </h3>
+
+                <div className="flex items-center justify-between text-sm md:text-base mb-4">
+                    <Rating rate={rating} />
+                    <p className="text-gray-900 dark:text-gray-300 font-medium">${price}</p>
                 </div>
-                <div className="flex justify-between items-center mt-auto">
-                    <p className="text-gray-700 text-xs md:text-lg lg:text-lg dark:text-gray-400">${price}</p>
-                    <CartBtn key={id} product={{ id, title, price, image, rating: { rate } }} current={false} />
+
+                <div className="mt-auto">
+                    <CartBtn
+                        key={id}
+                        product={{ id, title, price, image, rating: { rate } }}
+                        current={false}
+                    />
                 </div>
             </div>
+
 
         </>
     )

@@ -28,7 +28,7 @@ const CartBtn = ({ product }) => {
             ) : (
                 <button
                     onClick={handleAddCart}
-                    className="dark:border-gray-600 border border-black rounded-md p-1 px-2 dark:text-gray-400 hover:bg-black hover:text-white text-xs md:text-lg lg:text-lg mx-2"
+                    className="dark:border-gray-600 border border-black rounded-md p-1 px-2 dark:text-gray-400 hover:bg-black hover:text-white text-xs md:text-lg lg:text-lg"
                 >
                     Add Cart
                 </button>
