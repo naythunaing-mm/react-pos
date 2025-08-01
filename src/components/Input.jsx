@@ -26,6 +26,7 @@ const Input = () => {
                 id=""
                 rows="3"
                 placeholder="Write a review"
+                style={{ fontSize: "16px" }}
             ></textarea>
 
             <button
