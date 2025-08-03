@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import MainLayout from "../Layout/MainLayout";
 import MyCartPage from "../pages/MyCartPage";
@@ -8,7 +8,7 @@ import ProductDetailPage from "../pages/ProductDetailPage";
 import GroceryPage from "../pages/GroceryPage";
 import AuthPage from "../pages/AuthPage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <MainLayout />,
@@ -40,7 +40,5 @@ const router = createBrowserRouter([
 
         ]
     }
-], {
-    basename: "/react-pos",
-});
+]);
 export default router
